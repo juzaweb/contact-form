@@ -5,10 +5,11 @@ namespace Juzaweb\ContactForm\Models;
 use Juzaweb\CMS\Models\Model;
 use Juzaweb\CMS\Traits\ResourceModel;
 use Juzaweb\CMS\Traits\UUIDPrimaryKey;
+use Juzaweb\Network\Traits\Networkable;
 
 class Contact extends Model
 {
-    use ResourceModel, UUIDPrimaryKey;
+    use ResourceModel, UUIDPrimaryKey, Networkable;
 
     protected $table = 'contact_form_contacts';
 

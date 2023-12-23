@@ -21,6 +21,7 @@ return new class extends Migration {
                 $table->string('subject');
                 $table->text('message')->nullable();
                 $table->json('metas')->nullable();
+                $table->unsignedBigInteger('site_id')->default(0)->index();
                 $table->timestamps();
                 $table->index(['created_at']);
             }
