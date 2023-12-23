@@ -17,6 +17,10 @@
             "Juzaweb\\ContactForm\\": "src/"
         }
     },
+    "require": {
+        "php": ">=8.0",
+        "juzaweb/form-builder": "*"
+    },
     "require-dev": {
          "juzaweb/modules": "^1.0",
          "juzaweb/dev-tool": "^1.0"
