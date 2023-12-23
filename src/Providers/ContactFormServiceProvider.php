@@ -3,7 +3,7 @@
 namespace Juzaweb\ContactForm\Providers;
 
 use Juzaweb\CMS\Support\ServiceProvider;
-use Juzaweb\ContactForm\Actions\MenuAction;
+use Juzaweb\ContactForm\Actions;
 use Juzaweb\ContactForm\Repositories;
 
 class ContactFormServiceProvider extends ServiceProvider
@@ -14,7 +14,7 @@ class ContactFormServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
-        $this->registerHookActions([MenuAction::class]);
+        $this->registerHookActions([Actions\MenuAction::class, Actions\AjaxAction::class]);
     }
 
     /**
