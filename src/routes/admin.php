@@ -10,3 +10,7 @@
 | contains the "admin" middleware group. Now create something great!
 |
 */
+
+use Juzaweb\ContactForm\Http\Controllers\Backend\ContactController;
+
+Route::jwResource('contacts', ContactController::class);

@@ -3,12 +3,18 @@
 namespace Juzaweb\ContactForm\Providers;
 
 use Juzaweb\CMS\Support\ServiceProvider;
+use Juzaweb\ContactForm\Actions\MenuAction;
+use Juzaweb\ContactForm\Repositories;
 
 class ContactFormServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public array $bindings = [
+        Repositories\ContactRepository::class => Repositories\ContactRepositoryEloquent::class,
+    ];
+
+    public function boot(): void
     {
-        //
+        $this->registerHookActions([MenuAction::class]);
     }
 
     /**
@@ -16,18 +22,8 @@ class ContactFormServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register(): void
     {
         //
-    }
-
-    /**
-     * Get the services provided by the provider.
-     *
-     * @return array
-     */
-    public function provides()
-    {
-        return [];
     }
 }
