@@ -67,6 +67,7 @@ class MenuAction extends Action
                 'title' => __('Contacts'),
                 'menu' => [
                     'icon' => 'fa fa-envelope',
+                    'position' => 60,
                 ],
             ]
         );
